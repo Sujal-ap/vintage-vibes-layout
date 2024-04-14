@@ -60,9 +60,10 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             padding: 10px;
+            width: calc(50% - 20px); /* Initially, display two images side by side on mobile */
         }
         .product img {
-            max-width: calc(50% - 20px); /* Adjust width for two images in one line */
+            max-width: 100%;
             height: auto;
             border-radius: 5px;
         }
@@ -89,6 +90,12 @@
             height: auto;
             margin-left: 10px; /* Adjust margin as needed */
             mix-blend-mode: multiply;
+        }
+         /* Media query for larger screens (laptops/desktops) */
+         @media (min-width: 768px) {
+            .product {
+                width: calc(25% - 20px); /* Display four images side by side on larger screens */
+            }
         }
     </style>
 </head>
