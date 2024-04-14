@@ -16,6 +16,7 @@
             color: #fff;
             text-align: center;
             padding: 20px 0;
+            position: relative; /* Position relative for absolute positioning of sign-in link */
         }
         .logo {
             font-size: 24px;
@@ -65,10 +66,34 @@
             height: auto;
             border-radius: 5px;
         }
+        .company-logo {
+            width: 100px; /* Adjust width as needed */
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .sign-in {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #fff;
+            text-decoration: none;
+        }
+        .social-media {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .social-media img {
+            width: 30px; /* Adjust width as needed */
+            height: auto;
+            margin-left: 10px; /* Adjust margin as needed */
+        }
     </style>
 </head>
 <body>
     <div class="header">
+        <a href="#" class="sign-in">Sign In</a> <!-- Sign-in link added -->
+        <img src="company-logo.png" alt="Company Logo" class="company-logo">
         <div class="logo">Vintage Vibes Thrift Clothing Store</div>
         <div class="navigation">
             <a href="#">Home</a>
@@ -77,6 +102,16 @@
             <a href="#">Brands</a>
             <a href="#">Sale</a>
             <a href="#">Wishlist</a>
+        </div>
+        <div class="social-media">
+            <!-- Facebook logo with link -->
+            <a href="https://www.facebook.com/sujal.chaudhary.581730/" target="_blank">
+                <img src="facebook-logo.png" alt="Facebook">
+            </a>
+            <!-- Instagram logo with link -->
+            <a href="https://www.instagram.com/xpiyush._.x?igsh=NTc4MTIwNjQ2YQ%3D%3D" target="_blank">
+                <img src="instagram-logo.png" alt="Instagram">
+            </a>
         </div>
     </div>
     <div class="search-bar">
