@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product 1</title>
+    <title>Product 2</title>
 </head>
 <body>
     <!-- Anchor tag wrapping the image -->
@@ -18,15 +18,31 @@
         <li>Availability: In stock</li>
         <li>Price: $10.00</li>
     </ul>
-    <button onclick="addToCart('Product 1')">Add to Cart</button>
+    <button onclick="addToCart('Product 2')">Add to Cart</button>
     <a href="cart.html"><button>Buy It Now</button></a>
 
     <h2>Recommended Products</h2>
-    <ul>
-        <li><a href="product2.html">Product 2</a></li>
-        <li><a href="product3.html">Product 3</a></li>
-        <li><a href="product4.html">Product 4</a></li>
-    </ul>
+
+    <div>
+        <a href="product1.html">product 1</a>
+            <img src="product images/product1.jpg" alt="Product 1 Image" style="max-width: 100%;">
+        </a>
+        <a href="product3.html">Product 3</a>
+    </div>
+    <!-- Recommended product 2 -->
+    <div>
+        <a href=product3.htmll">
+            <img src="product images/product3.jpg" alt="Product 3 Image" style="max-width: 100%;">
+        </a>
+        <a href="product3.html">Product 3</a>
+    </div>
+    <!-- Recommended product 3 -->
+    <div>
+        <a href="product4.html">
+            <img src="product images/product4.jpg" alt="Product 4 Image" style="max-width: 100%;">
+        </a>
+        <a href="product4.html">Product 4</a>
+    </div>
 
     <script>
         function addToCart(productName) {
