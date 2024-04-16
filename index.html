@@ -10,13 +10,44 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4fbfa; /* Light blue background */
+            color: #33616c; /* Dark blue text */
         }
         .header {
-            background-color: #08828d;
-            color: #fff;
+            background-color: #08828d; /* Dark blue header */
+            color: #f4fbfa; /* Light blue text */
             text-align: center;
             padding: 20px 0;
             position: relative; /* Position relative for absolute positioning of sign-in link */
+        }
+        .goldman-regular {
+            font-family: "Goldman", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .goldman-bold {
+            font-family: "Goldman", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        .company-logo {
+            width: 100px; /* Adjust width as needed */
+            height: auto;
+            margin-right: 10px;
+        }
+        .company-name {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+        .company-name .word {
+            margin-bottom: 0;
         }
         .logo {
             font-size: 24px;
@@ -26,14 +57,14 @@
             margin-top: 10px;
         }
         .navigation a {
-            color: #fff;
+            color:  #f4fbfa;
             text-decoration: none;
             margin: 0 10px;
         }
         .search-bar {
             text-align: center;
             padding: 20px;
-            background-color: #f2f2f2;
+            background-color: #dbd8cd;
         }
         .search-bar input[type="text"] {
             padding: 10px;
@@ -43,8 +74,8 @@
         }
         .search-bar button {
             padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
+            background-color: #33616c;
+            color: #f4fbfa;
             border: none;
             cursor: pointer;
             border-radius: 5px;
@@ -61,6 +92,7 @@
             border-radius: 5px;
             padding: 10px;
             width: calc(50% - 20px); /* Initially, display two images side by side on mobile */
+            background-color: #dbd8cd;
         }
         .product img {
             max-width: 100%;
@@ -102,16 +134,13 @@
 <body>
     <div class="header">
         <a href="signin.html" class="sign-in">Sign In</a> <!-- Updated sign-in link -->
-        <img src="comapny logo.png" alt="Company Logo" class="company-logo">
-        <div class="logo">Vintage Vibes Thrift Clothing Store</div>
-        <div class="navigation">
-            <a href="#">Home</a>
-            <a href="#">Latest Products</a>
-            <a href="#">Categories</a>
-            <a href="#">Brands</a>
-            <a href="#">Sale</a>
-            <a href="#">Wishlist</a>
-        </div>
+        <div class="logo-container">
+            <img src="comapny logo.png" alt="Company Logo" class="company-logo">
+            <div class="company-name">
+                <h1 class="goldman-bold">Vintage</h1>
+                <h1 class="goldman-regular">Vibes</h1>
+                <h1 class="goldman-regular">Thrift</h1>
+            </div>
         <div class="social-media">
             <!-- Facebook logo with link -->
             <a href="https://www.facebook.com/sujal.chaudhary.581730" target="_blank">
