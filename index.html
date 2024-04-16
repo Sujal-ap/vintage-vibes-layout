@@ -20,15 +20,14 @@
             padding: 20px 0;
             position: relative; /* Position relative for absolute positioning of sign-in link */
         }
-        .goldman-regular {
-            font-family: "Goldman", sans-serif;
+        .nabla-custom {
+            font-family: "Nabla", system-ui;
+            font-optical-sizing: auto;
             font-weight: 400;
             font-style: normal;
-        }
-        .goldman-bold {
-            font-family: "Goldman", sans-serif;
-            font-weight: 700;
-            font-style: normal;
+            font-variation-settings:
+                "EDPT" 100,
+                "EHLT" 12;
         }
         .logo-container {
             display: flex;
@@ -45,6 +44,7 @@
             display: flex;
             flex-direction: column;
             text-align: left;
+            color: #33616c;
         }
         .company-name .word {
             margin-bottom: 0;
@@ -137,9 +137,9 @@
         <div class="logo-container">
             <img src="comapny logo.png" alt="Company Logo" class="company-logo">
             <div class="company-name">
-                <h1 class="goldman-bold">Vintage</h1>
-                <h1 class="goldman-regular">Vibes</h1>
-                <h1 class="goldman-regular">Thrift</h1>
+                <h1 class="nabla-custom">Vintage</h1>
+                <h1 class="nabla-custom">Vibes</h1>
+                <h1 class="nabla-custom">Thrift</h1>
             </div>
         <div class="social-media">
             <!-- Facebook logo with link -->
