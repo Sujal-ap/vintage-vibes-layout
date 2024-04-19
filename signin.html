@@ -70,6 +70,9 @@
                 <input type="password" id="signin-password" placeholder="Password">
                 <button type="submit">Sign In</button>
             </form>
+            <hr>
+            <h2>Sign In with Google</h2>
+            <button id="google-signin-btn">Sign in with Google</button>
         </div>
     </div>
 
@@ -89,8 +92,6 @@
 
         // Initialize Firebase
         const app = firebase.initializeApp(firebaseConfig);
-
-        // Get a reference to the auth service
         const auth = firebase.auth();
 
         // Sign Up form
@@ -125,6 +126,22 @@
                 .catch((error) => {
                     console.error("Error signing in:", error);
                     // Handle sign-in errors
+                });
+        });
+
+        // Google Sign-In button
+        const googleSigninBtn = document.getElementById('google-signin-btn');
+        googleSigninBtn.addEventListener('click', () => {
+            const provider = new firebase.auth.GoogleAuthProvider();
+            auth.signInWithPopup(provider)
+                .then((result) => {
+                    // Handle successful sign-in
+                    const user = result.user;
+                    console.log('Signed in user:', user);
+                })
+                .catch((error) => {
+                    // Handle sign-in errors
+                    console.error('Error signing in with Google:', error);
                 });
         });
     </script>
