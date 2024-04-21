@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", "sans-serif";
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(92, 150, 249, 0.523);
+  min-height: 100vh;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.222);
+  padding: 20px;
+  border-radius: 7px;
+  width: 50%;
+  height: auto;
+}
+
+.email {
+  margin: 10px 0;
+  width: 100%;
+  height: 30px;
+  border: none;
+  padding-left: 5px;
+}
+
+.email:focus {
+  padding-left: 5px;
+  font-size: 15px;
+}
+
+.email-container input:focus {
+  outline: 1px solid black;
+}
+
+.email-container #signUp {
+  width: auto;
+  height: 27px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.google-account img {
+  width: 25px;
+  height: 25px;
+}
+
+.google-account {
+  width: 98%;
+  display: flex;
+  background-color: #fff;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.google-account button {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}

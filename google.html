@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-container">
+        <h2>Login</h2>
+        <div class="email-container">
+          <input
+            type="text"
+            class="email"
+            name="email"
+            id="email"
+            placeholder="E-mail"
+          />
+          <input
+            type="password"
+            class="email"
+            name="Password"
+            id="password"
+            placeholder="Your Password"
+          />
+          <input
+            type="submit"
+            class="submit"
+            name="Submit"
+            id="signUp"
+            value="Sign Up"
+          />
+        </div>
+
+        <h3>Or with an account:</h3>
+        <div class="another-account">
+          <div class="google-account">
+            <img src="./image/google.png" alt="google icon" class="icon" />
+            <button class="google" id="login">Sign in with Google</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script type="module">
+     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+     import {  getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyCEXDTA-9yOtQHfTqzl0c3g1aNLzY4_3pg",
+    authDomain: "auth-df231.firebaseapp.com",
+    projectId: "auth-df231",
+    storageBucket: "auth-df231.appspot.com",
+    messagingSenderId: "459558142200",
+    appId: "1:459558142200:web:dc776e693fd9d333bd7b0d"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const provider = new GoogleAuthProvider(app);
+  const auth = getAuth(app);
+
+  login.addEventListener("click", (e) => {
+    signInWithRedirect(auth, provider);
+    getRedirectResult(auth)
+  .then((result) => {
+    // This gives you a Google Access Token. You can use it to access Google APIs.
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+
+    // The signed-in user info.
+    const user = result.user;
+    // IdP data available using getAdditionalUserInfo(result)
+    // ...
+  }).catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // The email of the user's account used.
+    const email = error.customData.email;
+    // The AuthCredential type that was used.
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    // ...
+  });
+  });
+
+  </script>
+</html>
