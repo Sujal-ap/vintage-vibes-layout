@@ -65,20 +65,9 @@
         const auth = getAuth(app);
 
         const loginBtn = document.getElementById('login');
-        const logoutBtn = document.getElementById('logout');
 
         loginBtn.addEventListener("click", (e) => {
             signInWithRedirect(auth, provider);
-        });
-
-        logoutBtn.addEventListener("click", (e) => {
-            signOut(auth)
-            .then(() => {
-                window.location.href = "index.html";
-            })
-            .catch((error) => {
-                console.error("Error signing out:", error);
-            });
         });
 
         getRedirectResult(auth)
@@ -89,7 +78,19 @@
                 profileImg.src = user.photoURL;
                 profileImg.alt = "Profile Image";
                 document.body.appendChild(profileImg);
-                logoutBtn.style.display = "block";
+
+                const logoutBtn = document.createElement("button");
+                logoutBtn.textContent = "Logout";
+                logoutBtn.addEventListener("click", () => {
+                    signOut(auth)
+                    .then(() => {
+                        window.location.href = "index.html";
+                    })
+                    .catch((error) => {
+                        console.error("Error signing out:", error);
+                    });
+                });
+                document.body.appendChild(logoutBtn);
             }
         }).catch((error) => {
             console.error("Error:", error);
