@@ -35,14 +35,14 @@ getRedirectResult(auth)
     .then((result) => {
         const user = result.user;
         if (user) {
-            // Hide sign-in link
-            signInLink.style.display = 'none';
-            // Display user's profile information
+            signInLink.style.display = 'none'; // Hide sign-in link
             profileImg.src = user.photoURL;
-            profileImg.style.display = 'inline-block'; // Show profile image
             userName.textContent = user.displayName;
+            profileImg.style.display = 'inline-block'; // Show profile image
             userName.style.display = 'inline-block'; // Show user name
             logoutBtn.style.display = 'inline-block'; // Show logout button
+        } else {
+            signInLink.style.display = 'inline-block'; // Show sign-in link if user is not logged in
         }
     })
     .catch((error) => {
