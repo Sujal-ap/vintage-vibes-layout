@@ -8,6 +8,7 @@ body {
     background-color: #f4fbfa; /* Light blue background */
     color: #33616c; /* Dark blue text */
 }
+
 .header {
     background-color: #08828d; /* Dark blue header */
     color: #f4fbfa; /* Light blue text */
@@ -15,6 +16,7 @@ body {
     padding: 20px 0;
     position: relative; /* Position relative for absolute positioning of sign-in link */
 }
+
 .nabla-custom {
     font-family: "Nabla", system-ui;
     font-optical-sizing: auto;
@@ -24,49 +26,59 @@ body {
         "EDPT" 100,
         "EHLT" 12;
 }
+
 .logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
 }
+
 .company-logo {
     width: 100px; /* Adjust width as needed */
     height: auto;
     margin-right: 10px;
 }
+
 .company-name {
     display: flex;
     flex-direction: column;
     text-align: left;
     color: #33616c;
 }
+
 .company-name .word {
     margin-bottom: 0;
 }
+
 .logo {
     font-size: 24px;
     font-weight: bold;
 }
+
 .navigation {
     margin-top: 10px;
 }
+
 .navigation a {
     color:  #f4fbfa;
     text-decoration: none;
     margin: 0 10px;
 }
+
 .search-bar {
     text-align: center;
     padding: 20px;
     background-color: #dbd8cd;
 }
+
 .search-bar input[type="text"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 60%;
 }
+
 .search-bar button {
     padding: 10px 20px;
     background-color: #33616c;
@@ -76,10 +88,12 @@ body {
     border-radius: 5px;
     margin-left: 10px;
 }
+
 .main-content {
     text-align: center;
     padding: 20px;
 }
+
 .product {
     display: inline-block;
     margin: 10px;
@@ -89,33 +103,60 @@ body {
     width: calc(50% - 20px); /* Initially, display two images side by side on mobile */
     background-color: #dbd8cd;
 }
+
 .product img {
     max-width: 100%;
     height: auto;
     border-radius: 5px;
 }
+
 .company-logo {
     width: 100px; /* Adjust width as needed */
     height: auto;
     margin-bottom: 10px;
 }
+
 .sign-in {
     position: absolute;
     top: 20px;
     left: 20px;
     color: #fff;
     text-decoration: none;
+    display: none; /* Initially hide sign-in link */
 }
+
 .social-media {
     position: absolute;
     top: 20px;
     right: 20px;
 }
+
 .social-media img {
     width: 30px; /* Adjust width as needed */
     height: auto;
-    margin-left: 10px; /* Adjust margin as needed 
+    margin-left: 10px; /* Adjust margin as needed */
 }
+
+/* Styles for profile image */
+#profileImg {
+    display: none; /* Initially hide the profile image */
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    border-radius: 50%; /* Make it circular */
+    margin-right: 10px; /* Adjust spacing */
+}
+
+/* Styles for user name */
+#userName {
+    display: none; /* Initially hide the user name */
+    font-size: 16px; /* Adjust size as needed */
+}
+
+/* Styles for logout button */
+#logoutBtn {
+    display: none; /* Initially hide logout button */
+}
+
 /* Media query for larger screens (laptops/desktops) */
 @media (min-width: 768px) {
     .product {
