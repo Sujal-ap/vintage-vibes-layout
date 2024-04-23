@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
-import { getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult, signOut } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
+import { getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCEXDTA-9yOtQHfTqzl0c3g1aNLzY4_3pg",
@@ -12,27 +12,17 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const provider = new GoogleAuthProvider(app);
-const auth = getAuth(app);
+export const auth = getAuth(app);
 
 const signInLink = document.getElementById('signInLink');
 const profileImg = document.getElementById('profileImg');
 const userName = document.getElementById('userName');
-const logoutBtn = document.getElementById('logoutBtn');
+export const logoutBtn = document.getElementById('logoutBtn');
 
 signInLink.style.display = 'none'; // Hide sign-in link initially
 
 signInLink.addEventListener('click', () => {
     signInWithRedirect(auth, provider);
-});
-
-logoutBtn.addEventListener('click', () => {
-    signOut(auth)
-    .then(() => {
-        window.location.href = "index.html";
-    })
-    .catch((error) => {
-        console.error("Error signing out:", error);
-    });
 });
 
 getRedirectResult(auth)
