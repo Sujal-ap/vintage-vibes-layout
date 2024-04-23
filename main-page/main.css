@@ -98,7 +98,6 @@ body {
     width: 100px; /* Adjust width as needed */
     height: auto;
     margin-bottom: 10px;
-    mix-blend-mode: multiply;
 }
 .sign-in {
     position: absolute;
@@ -115,8 +114,7 @@ body {
 .social-media img {
     width: 30px; /* Adjust width as needed */
     height: auto;
-    margin-left: 10px; /* Adjust margin as needed */
-    mix-blend-mode: multiply;
+    margin-left: 10px; /* Adjust margin as needed 
 }
 /* Media query for larger screens (laptops/desktops) */
 @media (min-width: 768px) {
