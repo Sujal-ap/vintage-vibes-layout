@@ -17,6 +17,7 @@ const provider = new GoogleAuthProvider(app);
 export const auth = getAuth(app);
 
 const signInLink = document.getElementById('signInLink');
+const userInfo = document.getElementById('userInfo');
 const profileImg = document.getElementById('profileImg');
 const userName = document.getElementById('userName');
 export const logoutBtn = document.getElementById('logoutBtn');
@@ -30,19 +31,29 @@ getRedirectResult(auth)
     const user = result.user;
     if (user) {
         signInLink.style.display = 'none'; // Hide sign-in link
+        userInfo.style.display = 'inline-block'; // Show user info
         profileImg.src = user.photoURL;
         userName.textContent = user.displayName;
-        profileImg.style.display = 'inline-block'; // Show profile image
-        userName.style.display = 'inline-block'; // Show user name
         logoutBtn.style.display = 'inline-block'; // Show logout button
         window.location.href = "index.html";
     } else {
         signInLink.style.display = 'block'; // Show sign-in link if user is not logged in
-        profileImg.style.display = 'none'; // Hide profile image
-        userName.style.display = 'none'; // Hide user name
-        logoutBtn.style.display = 'none'; // Hide logout button
+        userInfo.style.display = 'none'; // Hide user info if user is not logged in
+        logoutBtn.style.display = 'none'; // Hide logout button if user is not logged in
     }
 })
 .catch((error) => {
     console.error("Error:", error);
+});
+
+logoutBtn.addEventListener('click', () => {
+    signOut(auth)
+    .then(() => {
+        // Sign-out successful.
+        window.location.href = "index.html"; // Redirect to main page after logout
+    })
+    .catch((error) => {
+        // An error happened.
+        console.error("Error:", error);
+    });
 });
