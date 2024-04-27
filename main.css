@@ -122,7 +122,6 @@ body {
     left: 20px;
     color: #fff;
     text-decoration: none;
-    display: block; /* Initially hide sign-in link */
 }
 
 .social-media {

@@ -1,3 +1,5 @@
+/* main.js */
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
 import { getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult, signOut } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 
@@ -19,8 +21,6 @@ const profileImg = document.getElementById('profileImg');
 const userName = document.getElementById('userName');
 export const logoutBtn = document.getElementById('logoutBtn');
 
-signInLink.style.display = 'block'; // Show sign-in link initially
-
 signInLink.addEventListener('click', () => {
     signInWithRedirect(auth, provider);
 });
@@ -35,7 +35,12 @@ getRedirectResult(auth)
         profileImg.style.display = 'inline-block'; // Show profile image
         userName.style.display = 'inline-block'; // Show user name
         logoutBtn.style.display = 'inline-block'; // Show logout button
-        window.location.href = "index.html"; // Redirect to main page
+        window.location.href = "index.html";
+    } else {
+        signInLink.style.display = 'block'; // Show sign-in link if user is not logged in
+        profileImg.style.display = 'none'; // Hide profile image
+        userName.style.display = 'none'; // Hide user name
+        logoutBtn.style.display = 'none'; // Hide logout button
     }
 })
 .catch((error) => {
