@@ -138,7 +138,7 @@ body {
 
 /* Styles for profile image */
 #profileImg {
-    display: none; /* Initially hide the profile image */
+
     width: 50px; /* Adjust size as needed */
     height: 50px; /* Adjust size as needed */
     border-radius: 50%; /* Make it circular */
@@ -147,13 +147,13 @@ body {
 
 /* Styles for user name */
 #userName {
-    display: none; /* Initially hide the user name */
+    
     font-size: 16px; /* Adjust size as needed */
 }
 
 /* Styles for logout button */
 #logoutBtn {
-    display: none; /* Initially hide logout button */
+    
 }
 
 /* Media query for larger screens (laptops/desktops) */
