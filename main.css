@@ -136,25 +136,41 @@ body {
     margin-left: 10px; /* Adjust margin as needed */
 }
 
-/* Styles for profile image */
+/* Add styles for profile image */
 #profileImg {
-
+    display: inline-block; /* Initially hide the profile image */
     width: 50px; /* Adjust size as needed */
     height: 50px; /* Adjust size as needed */
     border-radius: 50%; /* Make it circular */
     margin-right: 10px; /* Adjust spacing */
 }
 
-/* Styles for user name */
+/* Add styles for user name */
 #userName {
-    
+    display: inline-block; /* Initially hide the user name */
     font-size: 16px; /* Adjust size as needed */
+    font-weight: bold; /* Add bold font weight */
+    color: #33616c; /* Dark blue text */
 }
 
-/* Styles for logout button */
+/* Add styles for logout button */
 #logoutBtn {
-    
+    display: inline-block; /* Initially hide logout button */
+    padding: 5px 10px; /* Adjust padding as needed */
+    background-color: #08828d; /* Dark blue background */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Adjust spacing */
 }
+
+/* Add hover effect for logout button */
+#logoutBtn:hover {
+    background-color: #33616c; /* Dark blue background on hover */
+}
+
+
 
 /* Media query for larger screens (laptops/desktops) */
 @media (min-width: 768px) {
