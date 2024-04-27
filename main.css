@@ -141,10 +141,7 @@ body {
     display: block;
 }
 
-/* Hide user info and logout button by default */
-#userInfo {
-    display: none;
-}
+
 
 #userInfo img {
     width: 50px; /* Adjust size as needed */
