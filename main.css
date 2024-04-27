@@ -15,6 +15,19 @@ body {
     position: relative; /* Position relative for absolute positioning of sign-in link */
 }
 
+.social-media {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.social-media img {
+    width: 30px; /* Adjust width as needed */
+    height: auto;
+    margin-left: 10px; /* Adjust margin as needed */
+}
+
+
 .nabla-custom {
     font-family: "Nabla", system-ui;
     font-optical-sizing: auto;
