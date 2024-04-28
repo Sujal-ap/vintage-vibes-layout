@@ -1,0 +1,24 @@
+/* CSS styles for layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #f4fbfa;
+    padding: 10px;
+    text-align: center;
+}
+
+.sign-in {
+    display: block;
+    text-decoration: none;
+    color: #3366cc;
+    margin-bottom: 10px;
+}
+
+.user-info {
+    display: none;
+    color: #3366cc;
+}
