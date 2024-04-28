@@ -3,12 +3,12 @@ import { getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult, sig
 
 // Firebase configuration
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    authDomain: "auth-df231.firebaseapp.com",
+    projectId: "auth-df231",  
+    apiKey: "AIzaSyCEXDTA-9yOtQHfTqzl0c3g1aNLzY4_3pg",
+    storageBucket: "auth-df231.appspot.com",
+    messagingSenderId: "459558142200",
+    appId: "1:459558142200:web:dc776e693fd9d333bd7b0d"
 };
 
 // Initialize Firebase
