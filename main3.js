@@ -4,9 +4,9 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/fireba
 import { getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult, signOut } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCEXDTA-9yOtQHfTqzl0c3g1aNLzY4_3pg",
     authDomain: "auth-df231.firebaseapp.com",
-    projectId: "auth-df231",
+    projectId: "auth-df231",  
+    apiKey: "AIzaSyCEXDTA-9yOtQHfTqzl0c3g1aNLzY4_3pg",
     storageBucket: "auth-df231.appspot.com",
     messagingSenderId: "459558142200",
     appId: "1:459558142200:web:dc776e693fd9d333bd7b0d"    
@@ -29,12 +29,13 @@ signInLink.addEventListener('click', () => {
 getRedirectResult(auth)
 .then((result) => {
     const user = result.user;
+    console.log("User:", user); // Log the user object to the console
     if (user) {
         signInLink.style.display = 'none'; // Hide sign-in link
-        userInfo.style.display = 'inline-block'; // Show user info
+        userInfo.style.display = 'block'; // Show user info
         profileImg.src = user.photoURL;
         userName.textContent = user.displayName;
-        logoutBtn.style.display = 'inline-block'; // Show logout button
+        logoutBtn.style.display = 'block'; // Show logout button
         window.location.href = "index.html";
     } else {
         signInLink.style.display = 'block'; // Show sign-in link if user is not logged in
