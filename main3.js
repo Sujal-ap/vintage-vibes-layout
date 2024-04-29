@@ -38,7 +38,7 @@ getRedirectResult(auth)
         logoutBtn.style.display = 'block'; // Show logout button
         window.location.href = "index.html";
     } else {
-        signInLink.style.display = 'block'; // Show sign-in link if user is not logged in
+        signInLink.style.display = 'none'; // Show sign-in link if user is not logged in
         userInfo.style.display = 'none'; // Hide user info if user is not logged in
         logoutBtn.style.display = 'none'; // Hide logout button if user is not logged in
     }
